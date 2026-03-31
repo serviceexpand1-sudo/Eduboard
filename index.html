@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
+<meta name="theme-color" content="#E8284A"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="EduBoard"/>
+<meta name="description" content="EduBoard — Devoirs, exercices et discussions entre élèves et professeurs"/>
+<link rel="apple-touch-icon" href="data:image/png;base64,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"/>
+<title>EduBoard</title>
+<style>
+:root{
+  --red:#E8284A;--redL:#FFF0F2;--redM:#F95C73;
+  --yellow:#F5C518;--yellowL:#FFFBEA;
+  --green:#18C964;--greenL:#E6FFF2;--greenM:#5DDBA5;
+  --blue:#3B82F6;--blueL:#EFF6FF;
+  --ink:#18182E;--ink2:#3D3D5C;--muted:#8888AA;
+  --bg:#F4F6FB;--white:#fff;--border:#E4E6F0;
+  --shadow:rgba(24,24,46,0.07);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;background:var(--bg)}
+#root{min-height:100vh;display:flex;justify-content:center;background:#D8DBE6}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+// PWA Manifest
+(function(){
+  var manifest={name:"EduBoard",short_name:"EduBoard",display:"standalone",
+    background_color:"#E8284A",theme_color:"#E8284A",orientation:"portrait-primary",
+    start_url:location.href,
+    icons:[{src:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAIeklEQVR4nO2dh7IUVRRF/RazgmJExayYc85ZMUfMYCSJopgwYsLf8gsezND9fmDkzvTjTdlV1mPm9Nnn9Furan/BXcsCnHv7uOMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAELFx7xWi868oun+z6ZjdM7cayy0YLNy3v4M3Nbml266XLu63Z7Uu7ZHTwjmZ3Tu2uZndfvLx7mt3b7L6yDZPdv2F0qOyBqT140WQPTe3hZo+UXTjZo80ea/b40i4YHXqi2ZNTe6ps/ejQ0+tHg6U9s36kPjOYg4Vrjoi+NOQ/ZvkJICELG68cLWycEh/5Z5Z/sIkAUrBw9RHpy5DfVH4CCM7CVY34yN+J/INN5xNAVJC/e/kHzxJAOMbiI7+L/AQQiKPiI7+b/IPnCCAEyK+RnwACgPw6+QfPE4AU5NfKTwBCkF8vPwGIQP4Y8g9eOI8AvEH+OPITgDPIH0v+wYsE4Abyx5OfAJxA/pjyE4ADyB9X/sFLBNA5yB9XfgLoGOSPLf/g5XMJoEuQP7b8BNAhyB9ffgLoCOTPIf/gFQLoBOTPIT8BdADy55F/8CoBmIP8eeQngA5A/jzyE4AxyJ9L/sFr5xCAJcifS/4hAdiilP8I/7Bjn9qZ3qD+L79apKxTe9Mb1H/sUYuUdWpveoP6z/xqkbJO7U1vUP+FVy1S1qm96QVq+cu/9KhFyjq1O71ALT8BEIAUtfzl3/fVImWd2p1eoJafAAhAilp+AiAAKWr5y08b1CJlndqdXqCWnwAIQIpa/vKjNrVIWad2pxeo5ScAnw23rBuNt3Xd6HDZB2cu78NmH03t4zMm+2RqnzbbtnZ525vtaLazbM1kuyZTO/6/qOUvP2lWy7EappL/8GfRAwjwe361HKtlCvkTBKC/zKIWYzXNW/4qfAABbnKppVhN85a/2p0kAOU1RqvD9b7GqJZ55ggc5a92nx4/APUdXrsAfO/wqkWeOQBH+avPgweglt80AOcL7GqR5w7AQf4cAYhfbzANwPH1BrXIcwXgJH/8AAI8XWIWgPPTJWqRZw7AUf7qiwwBiN/tMQ/A6d0etchzReAkf/wAAjxaZRqA46NVaokzyF/tyRKA8MU2swCcX2xTizx3AA7yV3tOSxCA+LlCuwB8nytUizxXAE7yxw8gwFudZgE4v9WpFnnmABzlr77MEID4oVqrg/V+qFYt8lwBOMkfP4AArzSbBuD4SrNa5AzyV1+lCEAnf3me3CwA5yfK1TLPFICz/AkC0MpvHoDj+/xqmTPIX+2NHkCAj1OYBeAo//D1XAGo5M8RgPjLLLYB+MifNgBn+au9pwYPIMBniewC8JN/+EaeAJTyV19nCUD4TS6zABzlzxKAWv4cAYg/SGcagJP8GQKIIH/1TfQAAnyN0SwAR/mHm+MGoPwL73/lzxGA+FOkamH6tGjyxw8gwHd41dL0YYr/w7sS+atvswQg/Ai1Wp7M8/5h27HKnyMA8RfY1RJlm/fv+eeRv/rulOABiOUngBVK73iH11L+HAEI5ScAzXOFXvLHD0Asf7nGqBZQvT7LX32fIQCh/OUao1pA9fosfx0+ALH85RqjWkD1+ix/vS98AFr5BwTg/lanp/w5AhDKTwArjCSp/PW+k4MHIJa/3OJSy5VtmeSvfwgegFp+ApgzhuDyxw9ALH+5xaWWqA+LKn/9Y5YARPITgO2iyZ8jAKH85RqjWpo+Lor89U/RAxDLX25xqWXp6yLInyMAofyWAaz0Jtdw89mj4ZtTe6vZ20s7azR8p9m7U3uvbN1o+P5kasFXFIFY/vgBiOUvVxhNA3CSP0sAR0MQyV//fFKSAETymwbgKP9wS7IARPLnCEAof7m4bnXInvJnC2AcgUD++pfoAYjlNw3AUf7h1nwBjCNwlj9HAEL5zQNwkv9w0gAmEfjJHz8AsfzlzR6zABzlL5dY1CLPHICj/PWv4QPQyt9JAA7yZw5gHIGT/DkCEMpfXmozDcBJ/t4E0LH89f7oAYjlNw3AUf5yi0st8dwROMhf7z8xQQBC+W0D8JO/NwF0LH/8AMTyl0dqzQJwlL9cX1QLPHcADvLXv2UIQCh/JwE4yN+rADqUP34AYvnL0+SmATjJ35sAOpa//j1FADr5TQNwlL+83KAW2GJdy58gAK385gE4yd+HADzkjx+AWP7yVRazABzlL+/1qAWeOwAH+es/TkgQgFB++wB85O9PAN3KHz8AsfzlEotdAH7y9yOA7uWv/8wSgEh+0wAc5S9PFaoFnjsAB/lzBCCU3zIAFk/+xb+iByCWv1xjVMuwGuclf4IAtPIPCaDX8scPQCx/ucWlFmK1zVP+xQPBA1DLTwD9ln/xwPEJAhDKXy6xqKVYLVPIv/h39ADE8hNAv+UPH0AW1AJFnPpMwBG1bBGnPhNwRC1bxKnPBBxRyxZx6jMBR9SyRZz6TMARtWwRpz4TcEQtW8SpzwQcUcsWceozAUfUskWc+kzAEbVsEac+E3BELVvEqc8EHLG6xjjetrXL295sR7OdZWsm29WML7CDGuRvX2BXnwk4gvztO7zqMwFHkL99jVF9JuAI8rd/z68+E3AE+duXWdRnAo4gf/sml/pMwBHkb19jVJ8JOIL87Tu86jMBR5C/fYFdfSbgCPK3X29Qnwk4gvztp0vUZwKOIH/73R71mYAjyN9+tEp9JuAI8rdfbFOfCTiC/O3nCtVnAo4gf/utTvWZgCPIn+wL7GAL8if7AjvYgvzJvsAOtiB/si+wgy3In+wL7GAL8if7AjvYgvzJvsAOtiB/si+wgy3In+wL7GAL8if7AjvYgvzJvsAOtiB/si+wgy3In+wL7GAL8vMFdgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAk/Avo/S+4vkHLvAAAAABJRU5ErkJggg==",sizes:"192x192",type:"image/png",purpose:"any maskable"}]};
+  var blob=new Blob([JSON.stringify(manifest)],{type:"application/manifest+json"});
+  var link=document.createElement("link");link.rel="manifest";
+  link.href=URL.createObjectURL(blob);document.head.appendChild(link);
+})();
+// Service Worker
+if("serviceWorker" in navigator){
+  var sw="self.addEventListener('install',function(){});self.addEventListener('fetch',function(e){e.respondWith(fetch(e.request).catch(function(){return caches.match(e.request);}));});";
+  var blob=new Blob([sw],{type:"application/javascript"});
+  navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(function(){});
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+<script type="text/babel" data-presets="react">
+const { useState, useRef, useEffect, useCallback } = React;
+
+/* ─────────────────────────────────────────────────
+   CONSTANTS  (all top-level — no hoisting bugs)
+───────────────────────────────────────────────── */
+const COLORS = ["#E8284A","#18C964","#F5C518","#3B82F6","#A855F7","#F97316","#EC4899","#0EA5E9"];
+const SUB_COLOR = {
+  Maths:"#E8284A", Français:"#18C964", Histoire:"#F5C518",
+  Sciences:"#0EA5E9", Anglais:"#A855F7", Physique:"#F97316", Philo:"#EC4899",
+};
+const SUBJECTS = ["Maths","Français","Histoire","Sciences","Anglais","Physique","Philo"];
+const TYPES    = ["Exercice","Interrogation","Devoir maison","Contrôle","Exposé","TP"];
+const TYPE_ICO = {
+  Exercice:"✏️", Interrogation:"⚡", "Devoir maison":"📝",
+  Contrôle:"📋", Exposé:"🎤", TP:"🔬",
+};
+const ROLES = ["Élève","Professeur","Administration"];
+
+const C = {
+  bg:"#F4F6FB", white:"#FFFFFF",
+  red:"#E8284A", redL:"#FFF0F2", redM:"#F95C73",
+  yellow:"#F5C518", yellowL:"#FFFBEA",
+  green:"#18C964", greenL:"#E6FFF2", greenM:"#5DDBA5",
+  blue:"#3B82F6", blueL:"#EFF6FF",
+  ink:"#18182E", ink2:"#3D3D5C", muted:"#8888AA",
+  border:"#E4E6F0", shadow:"rgba(24,24,46,0.08)", chatBg:"#F0F2F8",
+};
+
+/* ─── pure helpers ─── */
+const acOf   = s => SUB_COLOR[s] || C.red;
+const avgR   = a => a && a.length ? (a.reduce((x,y)=>x+y,0)/a.length).toFixed(1) : "—";
+const nowT   = () => new Date().toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
+const uid    = () => "_" + Math.random().toString(36).slice(2,9);
+const fmtB   = b => b<1024 ? b+" o" : b<1048576 ? Math.round(b/1024)+" Ko" : (b/1048576).toFixed(1)+" Mo";
+const fileIco= n=>{const e=(n||"").split(".").pop().toLowerCase();if(["jpg","jpeg","png","gif","webp"].includes(e))return"🖼️";if(e==="pdf")return"📄";if(["doc","docx"].includes(e))return"📝";if(["ppt","pptx"].includes(e))return"📊";return"📎";};
+
+/* ─── style factories ─── */
+const card = (x={}) => ({background:C.white, borderRadius:20, border:`1.5px solid ${C.border}`, boxShadow:`0 2px 18px ${C.shadow}`, ...x});
+const pill = (bg,col,x={}) => ({display:"inline-flex", alignItems:"center", borderRadius:30, padding:"4px 12px", fontSize:11, fontWeight:700, background:bg, color:col, ...x});
+const inputS = (err=false) => ({
+  width:"100%", background:C.bg,
+  border:`1.5px solid ${err ? C.red : C.border}`,
+  borderRadius:12, padding:"12px 14px",
+  color:C.ink, fontSize:14, fontFamily:"inherit", outline:"none",
+});
+
+/* ─── seed data ─── */
+const SEED_ACCOUNTS = {
+  t1:{id:"t1",name:"M. Dupont",   role:"Professeur",subject:"Maths",   bio:"Enseignant depuis 12 ans. Spécialiste en analyse et algèbre.",   avatar:null,color:"#E8284A",ratings:[]},
+  t2:{id:"t2",name:"Mme. Laurent",role:"Professeur",subject:"Français",bio:"Littérature française et dissertation. Passionnée de Baudelaire.",avatar:null,color:"#18C964",ratings:[]},
+  t3:{id:"t3",name:"M. Benali",   role:"Professeur",subject:"Histoire",bio:"Histoire moderne et contemporaine. Amateur de géopolitique.",      avatar:null,color:"#F5C518",ratings:[]},
+  t4:{id:"t4",name:"Mme. Moreau", role:"Professeur",subject:"Physique", bio:"Physique-Chimie terminale. Passionnée de mécanique quantique.",   avatar:null,color:"#F97316",ratings:[]},
+};
+
+const SEED_POSTS = [
+  {id:1,  authorId:"t1",authorName:"M. Dupont",   subject:"Maths",   type:"Exercice",       title:"Dérivées — Série 1",              createdAt:"il y a 1h",  files:[], description:"Calculer la dérivée des fonctions suivantes :\n1) f(x) = 3x² − 5x + 2\n2) g(x) = √x + 1/x\n3) h(x) = sin(x)·cos(x)\n4) k(x) = eˣ/(x+1)\n\nRappel : (uv)' = u'v + uv'"},
+  {id:2,  authorId:"t1",authorName:"M. Dupont",   subject:"Maths",   type:"Exercice",       title:"Suites — Convergence",            createdAt:"il y a 3h",  files:[], description:"Étudier la convergence :\n1) uₙ = (2n²+3)/(n²−1)\n2) vₙ = n·sin(1/n)\n3) wₙ = (1+1/n)ⁿ\n\nDonner la limite ou justifier la divergence."},
+  {id:3,  authorId:"t1",authorName:"M. Dupont",   subject:"Maths",   type:"Contrôle",       title:"Intégrales — Calcul",             createdAt:"hier",       files:[], description:"Partie A (10 pts)\n1) ∫₀¹ (x³−2x) dx\n2) ∫ xeˣ dx (par parties)\n3) ∫ dx/(x²+1)\n\nPartie B (10 pts)\nAire entre y=x² et y=2x. Durée : 1h30"},
+  {id:4,  authorId:"t1",authorName:"M. Dupont",   subject:"Maths",   type:"Devoir maison",  title:"Probabilités — Loi binomiale",    createdAt:"il y a 2j",  files:[], description:"QCM 10 questions, 4 réponses dont 1 correcte.\n1) Loi de X et paramètres.\n2) P(X=3), P(X≥7), E(X), V(X).\n3) Nb questions pour P(X≥1)>0.5.\n\nÀ rendre vendredi."},
+  {id:5,  authorId:"t1",authorName:"M. Dupont",   subject:"Maths",   type:"Exercice",       title:"Géométrie — Plans et droites",    createdAt:"il y a 4j",  files:[], description:"A(1,0,2) B(3,1,0) C(0,2,1) D(2,3,4)\n1) A,B,C non colinéaires ?\n2) Équation du plan (ABC).\n3) Distance de D au plan.\n4) Intersection avec z=0."},
+  {id:6,  authorId:"t4",authorName:"Mme. Moreau", subject:"Physique", type:"Exercice",       title:"Mécanique — Lois de Newton",      createdAt:"il y a 2h",  files:[], description:"Bloc m=2 kg, plan incliné θ=30°, μ=0,3\n1) Bilan des forces.\n2) Composante du poids le long du plan.\n3) Accélération si glissement.\n4) Force pour vitesse constante.\n\ng = 9,8 m/s²"},
+  {id:7,  authorId:"t4",authorName:"Mme. Moreau", subject:"Physique", type:"Contrôle",       title:"Électricité — Circuits RC et RL", createdAt:"hier",       files:[], description:"Partie 1 RC (10pts)\nC=10μF, U=12V, R=1kΩ\n1) Équation différentielle.\n2) Expression u_C(t), calculer τ.\n3) Temps pour 99% de U.\n\nPartie 2 RL (10pts)\nL=50mH, R=100Ω\n1) i(t) à la fermeture.\n2) Énergie à t→∞."},
+  {id:8,  authorId:"t4",authorName:"Mme. Moreau", subject:"Physique", type:"Exercice",       title:"Optique — Lentilles convergentes", createdAt:"il y a 3j", files:[], description:"Lentille f'=+10cm, objet à 30cm.\n1) Position de l'image.\n2) Grandissement γ. Image droite ou renversée ?\n3) Construction (rayons remarquables).\n4) Objet à 5cm (entre F et lentille)."},
+  {id:9,  authorId:"t4",authorName:"Mme. Moreau", subject:"Physique", type:"Devoir maison",  title:"Thermodynamique — 1er principe",  createdAt:"il y a 5j",  files:[], description:"1 mol gaz parfait :\n— Étape 1 : compression isotherme V₁→V₂, T=300K\n— Étape 2 : détente isobare V₂→V₃\n— Étape 3 : retour état initial\n\n1) Diagramme (P,V).\n2) W, Q, ΔU pour chaque étape.\n3) Rendement.\nR = 8,314 J/mol·K"},
+  {id:10, authorId:"t2",authorName:"Mme. Laurent",subject:"Français", type:"Exercice",       title:"Commentaire — Baudelaire",        createdAt:"il y a 1h",  files:[], description:"Commentez :\n« Je suis la plaie et le couteau !\nJe suis le soufflet et la joue !\nJe suis les membres et la roue,\nEt la victime et le bourreau ! »\n\n1) Dualité bourreau/victime\n2) Le paradoxe\n3) Modernité baudelairienne\n500-700 mots."},
+  {id:11, authorId:"t2",authorName:"Mme. Laurent",subject:"Français", type:"Devoir maison",  title:"Dissertation — Personnage roman", createdAt:"il y a 6h",  files:[], description:"Sujet : « Le roman est-il le meilleur moyen de se mettre dans la peau d'un autre ? »\n\nŒuvres : Madame Bovary · L'Étranger · Les Misérables\n\nCritères :\n• Plan (4pts) • Arguments (8pts) • Style (4pts) • Forme (4pts)\n\nÀ rendre dans 3 semaines."},
+  {id:12, authorId:"t2",authorName:"Mme. Laurent",subject:"Français", type:"Exercice",       title:"Grammaire — Subordination",       createdAt:"il y a 2j",  files:[], description:"Ex 1 — Nature et fonction :\n1) Je pense [que tu as raison].\n2) [Quand il pleut], je reste chez moi.\n3) Il est parti [sans que je le sache].\n\nEx 2 — Transformer en subordonnée :\n1) À cause de la pluie, le match est annulé.\n2) Malgré sa fatigue, il a continué."},
+  {id:13, authorId:"t2",authorName:"Mme. Laurent",subject:"Français", type:"Contrôle",       title:"Lecture analytique — Zola",       createdAt:"il y a 3j",  files:[], description:"Extrait Germinal Ch.VI\n\n1) Champ lexical dominant. (3pts)\n2) Procédé stylistique pour la foule — 2 exemples. (4pts)\n3) En quoi illustre-t-il le naturalisme ? (3pts)\n4) Zola : le romancier est un « médecin social ». Discutez. (10pts)\n\nDurée : 2h."},
+  {id:14, authorId:"t3",authorName:"M. Benali",   subject:"Histoire", type:"Contrôle",       title:"La Révolution française",         createdAt:"il y a 4j",  files:[], description:"De 1789 à 1799.\nCauses, événements majeurs, conséquences politiques en Europe."},
+];
+
+const SEED_ROOMS = [
+  {id:"r1",name:"Groupe Maths S1",   emoji:"📐",desc:"Révisions bac",      ownerId:"t1",members:["t1"],maxMembers:8,messages:[
+    {id:"m1",authorId:"t1",authorName:"M. Dupont",text:"Bonjour ! Révisez bien la méthode de dérivation 📝",time:"10:23"},
+    {id:"m2",authorId:"_s",authorName:"Lucas",    text:"Merci prof ! Chapitre 4 pour jeudi ?",             time:"10:25"},
+  ]},
+  {id:"r2",name:"Physique — TP Optique",emoji:"🔭",desc:"TP lentilles",    ownerId:"t4",members:["t4"],maxMembers:6,messages:[]},
+  {id:"r3",name:"Atelier Dissertation",emoji:"✍️",desc:"Aide rédaction",   ownerId:"",  members:[],   maxMembers:5,messages:[]},
+];
+
+/* ══════════════════════════════════════════
+   SHARED UI COMPONENTS
+══════════════════════════════════════════ */
+function Avatar({ acc, size=40, fs=16 }) {
+  const bg = acc?.color || acOf(acc?.subject) || C.blue;
+  if (!acc) return <div style={{width:size,height:size,borderRadius:"50%",background:C.border,flexShrink:0}}/>;
+  if (acc.avatar) return (
+    <img src={acc.avatar} alt="" style={{width:size,height:size,borderRadius:"50%",objectFit:"cover",
+      border:`2px solid ${C.white}`,boxShadow:"0 2px 8px rgba(0,0,0,.1)",flexShrink:0}}/>
+  );
+  return (
+    <div style={{width:size,height:size,borderRadius:"50%",flexShrink:0,
+      background:`linear-gradient(135deg,${bg},${bg}bb)`,
+      display:"flex",alignItems:"center",justifyContent:"center",
+      fontSize:fs,color:"#fff",fontWeight:900,
+      border:`2px solid ${C.white}`,boxShadow:"0 2px 8px rgba(0,0,0,.1)"}}>
+      {(acc.name||"?").trim()[0].toUpperCase()}
+    </div>
+  );
+}
+
+function StarRow({ val, size=14, onPick }) {
+  const n = parseFloat(val) || 0;
+  return (
+    <span>
+      {[1,2,3,4,5].map(i => (
+        <span key={i}
+          onClick={onPick ? () => onPick(i) : undefined}
+          style={{color: i<=Math.round(n) ? C.yellow : C.border, fontSize:size,
+            cursor: onPick ? "pointer" : "default", userSelect:"none"}}>★</span>
+      ))}
+    </span>
+  );
+}
+
+function Label({ children }) {
+  return <div style={{color:C.ink2,fontSize:12,fontWeight:700,marginBottom:6}}>{children}</div>;
+}
+
+function SecTitle({ children }) {
+  return <div style={{color:C.muted,fontSize:11,fontWeight:700,textTransform:"uppercase",
+    letterSpacing:1.2,marginBottom:10}}>{children}</div>;
+}
+
+function Btn({ children, onClick, style={}, disabled=false }) {
+  return (
+    <button onClick={onClick} disabled={disabled}
+      style={{fontFamily:"inherit",cursor:disabled?"not-allowed":"pointer",border:"none",
+        transition:"opacity .15s, transform .15s",opacity:disabled?.5:1, ...style}}>
+      {children}
+    </button>
+  );
+}
+
+/* ══════════════════════════════════════════
+   SETUP WIZARD (3 steps — fully bug-free)
+══════════════════════════════════════════ */
+function Setup({ onDone }) {
+  const [step,    setStep]   = useState(1);
+  const [name,    setName]   = useState("");
+  const [role,    setRole]   = useState("Élève");
+  const [subject, setSubject]= useState("Maths");
+  const [bio,     setBio]    = useState("");
+  const [avatar,  setAvatar] = useState(null);
+  const [color,   setColor]  = useState(COLORS[3]);
+  const [nameErr, setNameErr]= useState(false);
+
+  /* pick avatar image */
+  function pickAvatar() {
+    const inp = document.createElement("input");
+    inp.type = "file"; inp.accept = "image/*";
+    inp.onchange = e => {
+      const f = e.target.files[0]; if (!f) return;
+      const r = new FileReader();
+      r.onload = ev => setAvatar(ev.target.result);
+      r.readAsDataURL(f);
+    };
+    inp.click();
+  }
+
+  function handleNext() {
+    if (step === 1) {
+      if (!name.trim()) {
+        setNameErr(true);
+        setTimeout(() => setNameErr(false), 800);
+        return;
+      }
+    }
+    if (step < 3) { setStep(s => s+1); return; }
+    /* step 3 → finish */
+    const id  = "u_" + Date.now();
+    const acc = { id, name:name.trim(), role, subject, bio, avatar, color, ratings:[] };
+    onDone(acc);
+  }
+
+  const pct = (step/3)*100;
+
+  return (
+    <div style={{flex:1,overflowY:"auto",padding:"24px 24px 48px",
+      animation: nameErr ? "shake .5s ease" : "fadeUp .35s ease"}}>
+
+      {/* progress */}
+      <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:28}}>
+        {step > 1 && (
+          <Btn onClick={() => setStep(s => s-1)}
+            style={{background:"none",color:C.muted,fontSize:18,fontWeight:700,padding:0}}>←</Btn>
+        )}
+        <div style={{flex:1,height:6,background:C.border,borderRadius:10}}>
+          <div style={{width:`${pct}%`,height:"100%",borderRadius:10,transition:"width .35s",
+            background:`linear-gradient(90deg,${C.red},${C.yellow})`}}/>
+        </div>
+        <span style={{color:C.muted,fontSize:12,fontWeight:700,flexShrink:0}}>{step}/3</span>
+      </div>
+
+      {/* ── STEP 1 ── */}
+      {step === 1 && (
+        <>
+          <h2 style={{fontFamily:"Georgia,serif",fontSize:26,fontWeight:900,color:C.ink,marginBottom:6}}>
+            Qui êtes-vous ? 👋
+          </h2>
+          <p style={{color:C.muted,fontSize:13,marginBottom:24,lineHeight:1.6}}>
+            Aucun mot de passe requis — accès immédiat.
+          </p>
+
+          <Label>Prénom et nom *</Label>
+          <input
+            value={name}
+            onChange={e => { setName(e.target.value); if(nameErr) setNameErr(false); }}
+            onKeyDown={e => e.key==="Enter" && handleNext()}
+            placeholder="ex : Marie Dubois"
+            autoFocus
+            style={{...inputS(nameErr), marginBottom:6}}
+          />
+          {nameErr && (
+            <p style={{color:C.red,fontSize:12,marginBottom:12,marginTop:2}}>
+              ⚠️ Merci d'entrer votre nom pour continuer.
+            </p>
+          )}
+
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginTop:14}}>
+            <div>
+              <Label>Rôle</Label>
+              <select value={role} onChange={e => setRole(e.target.value)}
+                style={{width:"100%",background:C.bg,border:`1.5px solid ${C.border}`,
+                  borderRadius:12,padding:"11px 10px",color:C.ink,fontSize:13,fontFamily:"inherit"}}>
+                {ROLES.map(r => <option key={r}>{r}</option>)}
+              </select>
+            </div>
+            <div>
+              <Label>Matière</Label>
+              <select value={subject} onChange={e => setSubject(e.target.value)}
+                style={{width:"100%",background:C.bg,border:`1.5px solid ${C.border}`,
+                  borderRadius:12,padding:"11px 10px",color:C.ink,fontSize:13,fontFamily:"inherit"}}>
+                {SUBJECTS.map(s => <option key={s}>{s}</option>)}
+              </select>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* ── STEP 2 ── */}
+      {step === 2 && (
+        <>
+          <h2 style={{fontFamily:"Georgia,serif",fontSize:26,fontWeight:900,color:C.ink,marginBottom:6}}>
+            Personnalisez ! 🎨
+          </h2>
+          <p style={{color:C.muted,fontSize:13,marginBottom:24}}>Photo et couleur de profil.</p>
+
+          <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:14,marginBottom:22}}>
+            <div style={{position:"relative",cursor:"pointer"}} onClick={pickAvatar}>
+              <div style={{width:100,height:100,borderRadius:"50%",overflow:"hidden",
+                background:`linear-gradient(135deg,${color},${color}99)`,
+                display:"flex",alignItems:"center",justifyContent:"center",
+                fontSize:42,color:"#fff",fontWeight:900,
+                border:`3px solid ${C.white}`,boxShadow:"0 4px 20px rgba(0,0,0,.12)"}}>
+                {avatar
+                  ? <img src={avatar} alt="" style={{width:"100%",height:"100%",objectFit:"cover"}}/>
+                  : (name||"?")[0].toUpperCase()
+                }
+              </div>
+              <div style={{position:"absolute",bottom:2,right:2,width:28,height:28,borderRadius:"50%",
+                background:C.white,border:`1.5px solid ${C.border}`,
+                display:"flex",alignItems:"center",justifyContent:"center",fontSize:14}}>📷</div>
+            </div>
+            {avatar && (
+              <Btn onClick={() => setAvatar(null)}
+                style={{background:"none",color:C.muted,fontSize:12,fontWeight:600}}>
+                Supprimer la photo
+              </Btn>
+            )}
+          </div>
+
+          <Label>Couleur d'avatar</Label>
+          <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
+            {COLORS.map(col => (
+              <div key={col} onClick={() => setColor(col)}
+                style={{width:36,height:36,borderRadius:"50%",background:col,cursor:"pointer",
+                  border:`3px solid ${color===col ? C.ink : "transparent"}`,
+                  boxShadow: color===col ? "0 0 0 2px white inset" : "none",
+                  transition:"border .15s"}}/>
+            ))}
+          </div>
+        </>
+      )}
+
+      {/* ── STEP 3 ── */}
+      {step === 3 && (
+        <>
+          <h2 style={{fontFamily:"Georgia,serif",fontSize:26,fontWeight:900,color:C.ink,marginBottom:6}}>
+            Présentez-vous ✍️
+          </h2>
+          <p style={{color:C.muted,fontSize:13,marginBottom:18}}>Bio optionnelle.</p>
+
+          {/* preview card */}
+          <div style={{...card(),padding:16,display:"flex",alignItems:"center",gap:14,marginBottom:18}}>
+            <div style={{width:56,height:56,borderRadius:"50%",overflow:"hidden",flexShrink:0,
+              background:`linear-gradient(135deg,${color},${color}99)`,
+              display:"flex",alignItems:"center",justifyContent:"center",
+              fontSize:22,color:"#fff",fontWeight:900}}>
+              {avatar
+                ? <img src={avatar} alt="" style={{width:"100%",height:"100%",objectFit:"cover"}}/>
+                : (name||"?")[0].toUpperCase()
+              }
+            </div>
+            <div>
+              <div style={{fontWeight:800,color:C.ink,fontSize:15}}>{name||"Votre nom"}</div>
+              <span style={pill(`${color}20`,color,{display:"inline-flex",marginTop:4})}>{role}</span>
+            </div>
+          </div>
+
+          <Label>Bio (optionnel)</Label>
+          <textarea
+            rows={4}
+            value={bio}
+            onChange={e => setBio(e.target.value)}
+            placeholder="Parlez de vous, vos matières préférées…"
+            style={{...inputS(),resize:"none",lineHeight:1.65}}
+          />
+        </>
+      )}
+
+      <Btn onClick={handleNext}
+        style={{marginTop:28,width:"100%",
+          background:`linear-gradient(135deg,${C.red},${C.redM})`,
+          color:"#fff",borderRadius:16,padding:"15px",
+          fontSize:15,fontWeight:800,
+          boxShadow:"0 5px 20px rgba(232,40,74,.28)"}}>
+        {step < 3 ? "Suivant →" : "🚀 Entrer dans EduBoard"}
+      </Btn>
+    </div>
+  );
+}
+
+/* ══════════════════════════════════════════
+   MAIN APP
+══════════════════════════════════════════ */
+export default function App() {
+
+  /* ── global state ── */
+  const [user,     setUser]    = useState(null);
+  const [accounts, setAccounts]= useState(SEED_ACCOUNTS);
+  const [posts,    setPosts]   = useState(SEED_POSTS);
+  const [rooms,    setRooms]   = useState(SEED_ROOMS);
+
+  /* ── navigation ── */
+  const [tab,     setTab]    = useState("feed");
+  const [view,    setView]   = useState(null);  // null | detail | profview | editprofile | roomview | createroom
+  const [selPost, setSelPost]= useState(null);
+  const [selProf, setSelProf]= useState(null);
+  const [selRoom, setSelRoom]= useState(null);
+  const [filter,  setFilter] = useState("Tous");
+  const [lightbox,setLightbox]= useState(null);
+
+  /* ── publish form ── */
+  const [pubTitle, setPubTitle]= useState("");
+  const [pubSubj,  setPubSubj] = useState(SUBJECTS[0]);
+  const [pubType,  setPubType] = useState(TYPES[0]);
+  const [pubDesc,  setPubDesc] = useState("");
+  const [pubFiles, setPubFiles]= useState([]);
+  const [published,setPublished]=useState(false);
+
+  /* ── chat ── */
+  const [chatMsg, setChatMsg] = useState("");
+  const chatEndRef = useRef();
+
+  /* ── create room form ── */
+  const [crName,   setCrName]  = useState("");
+  const [crEmoji,  setCrEmoji] = useState("💬");
+  const [crDesc,   setCrDesc]  = useState("");
+  const [crMax,    setCrMax]   = useState(5);
+  const [crTeach,  setCrTeach] = useState("");
+
+  /* ── ratings ── */
+  const [pendR, setPendR] = useState({});
+  const [doneR, setDoneR] = useState({});
+
+  /* ── edit profile form ── */
+  const [editName,  setEditName] = useState("");
+  const [editBio,   setEditBio]  = useState("");
+  const [editSubj,  setEditSubj] = useState(SUBJECTS[0]);
+  const [editColor, setEditColor]= useState(COLORS[3]);
+  const [editSaved, setEditSaved]= useState(false);
+
+  /* ── derived ── */
+  const canPublish  = user?.role === "Professeur";
+  const uc          = user?.color || C.blue;
+  const allTeachers = Object.values(accounts).filter(a => a.role === "Professeur");
+  const filteredPosts = filter === "Tous" ? posts : posts.filter(p => p.subject === filter);
+
+  /* auto-scroll chat */
+  useEffect(() => {
+    if (view === "roomview" && chatEndRef.current) {
+      chatEndRef.current.scrollIntoView({ behavior:"smooth" });
+    }
+  }, [selRoom, view]);
+
+  /* sync selRoom with live rooms */
+  useEffect(() => {
+    if (selRoom) {
+      const live = rooms.find(r => r.id === selRoom.id);
+      if (live) setSelRoom(live);
+    }
+  }, [rooms]);
+
+  /* ── helpers ── */
+  function goBack() {
+    setView(null); setSelPost(null); setSelProf(null); setSelRoom(null);
+  }
+
+  function pickImage(cb) {
+    const inp = document.createElement("input");
+    inp.type = "file"; inp.accept = "image/*"; inp.multiple = true;
+    inp.onchange = e => {
+      Array.from(e.target.files).forEach(f => {
+        const r = new FileReader();
+        r.onload = ev => cb({ name:f.name, size:fmtB(f.size), dataUrl:ev.target.result });
+        r.readAsDataURL(f);
+      });
+      e.target.value = "";
+    };
+    inp.click();
+  }
+
+  function pickDoc(cb) {
+    const inp = document.createElement("input");
+    inp.type = "file"; inp.multiple = true;
+    inp.onchange = e => {
+      Array.from(e.target.files).forEach(f => {
+        const r = new FileReader();
+        r.onload = ev => cb({ name:f.name, size:fmtB(f.size), dataUrl:ev.target.result });
+        r.readAsDataURL(f);
+      });
+      e.target.value = "";
+    };
+    inp.click();
+  }
+
+  function dlFile(file) {
+    if (!file?.dataUrl) { alert("Fichier de démonstration — pas de données."); return; }
+    const a = document.createElement("a"); a.href = file.dataUrl; a.download = file.name; a.click();
+  }
+
+  /* ── publish ── */
+  function handlePublish() {
+    if (!pubTitle.trim()) return;
+    const post = {
+      id: Date.now(), authorId:user.id, authorName:user.name,
+      subject:pubSubj, type:pubType, title:pubTitle.trim(),
+      description:pubDesc, createdAt:"À l'instant", files:pubFiles,
+    };
+    setPosts(p => [post, ...p]);
+    setPublished(true);
+    setTimeout(() => {
+      setPublished(false); setTab("feed");
+      setPubTitle(""); setPubDesc(""); setPubFiles([]);
+    }, 1600);
+  }
+
+  /* ── rating ── */
+  function submitRating(tid) {
+    const score = pendR[tid]; if (!score) return;
+    setAccounts(a => {
+      const acc = a[tid]; if (!acc) return a;
+      return { ...a, [tid]: { ...acc, ratings:[...acc.ratings, score] } };
+    });
+    setDoneR(r => ({ ...r, [tid]:score }));
+  }
+
+  /* ── edit profile ── */
+  function openEdit() {
+    setEditName(user.name); setEditBio(user.bio||"");
+    setEditSubj(user.subject); setEditColor(user.color||COLORS[3]);
+    setEditSaved(false); setView("editprofile");
+  }
+  function saveEdit() {
+    const u2 = { ...user, name:editName||user.name, bio:editBio, subject:editSubj, color:editColor };
+    setUser(u2); setAccounts(a => ({ ...a, [u2.id]:u2 }));
+    setEditSaved(true);
+    setTimeout(() => { setView(null); setTab("profile"); setEditSaved(false); }, 1200);
+  }
+  function changeAvatar() {
+    const inp = document.createElement("input"); inp.type="file"; inp.accept="image/*";
+    inp.onchange = e => {
+      const f = e.target.files[0]; if (!f) return;
+      const r = new FileReader();
+      r.onload = ev => {
+        const u2 = { ...user, avatar:ev.target.result };
+        setUser(u2); setAccounts(a => ({ ...a, [u2.id]:u2 }));
+      };
+      r.readAsDataURL(f);
+    };
+    inp.click();
+  }
+
+  /* ── create room ── */
+  function handleCreateRoom() {
+    if (!crName.trim()) return;
+    const members = [user.id, ...(crTeach ? [crTeach] : [])];
+    const newRoom = {
+      id:"r_"+Date.now(), name:crName.trim(), emoji:crEmoji||"💬",
+      desc:crDesc, ownerId:user.id, members,
+      maxMembers:Math.max(1,Math.min(10,crMax)), messages:[],
+    };
+    setRooms(r => [...r, newRoom]);
+    setCrName(""); setCrEmoji("💬"); setCrDesc(""); setCrMax(5); setCrTeach("");
+    setView(null); setTab("chat");
+  }
+
+  /* ── chat send ── */
+  function handleSend() {
+    if (!chatMsg.trim() || !selRoom) return;
+    const msg = { id:"m_"+Date.now(), authorId:user.id, authorName:user.name, text:chatMsg.trim(), time:nowT() };
+    setRooms(rs => rs.map(r => r.id===selRoom.id ? { ...r, messages:[...r.messages,msg] } : r));
+    setChatMsg("");
+  }
+
+  /* ══ PHONE WRAPPER ══ */
+  const phoneW = {
+    width:"100%", maxWidth:430, background:C.bg, borderRadius:32, overflow:"hidden",
+    boxShadow:"0 24px 80px rgba(24,24,46,.18), 0 0 0 1.5px rgba(255,255,255,.8)",
+    display:"flex", flexDirection:"column", minHeight:"92vh", position:"relative",
+  };
+
+  /* ══ SPLASH ══ */
+  if (!user) return (
+    <Wrap>
+      <div style={phoneW}>
+        <div style={{flex:1,display:"flex",flexDirection:"column",
+          background:`linear-gradient(160deg,${C.red},${C.yellow})`}}>
+          {/* hero */}
+          <div style={{display:"flex",flexDirection:"column",alignItems:"center",
+            justifyContent:"center",flex:1,padding:"30px 28px 0"}}>
+            <div style={{width:96,height:96,borderRadius:28,background:"rgba(255,255,255,.22)",
+              display:"flex",alignItems:"center",justifyContent:"center",
+              fontSize:48,marginBottom:24,boxShadow:"0 8px 32px rgba(0,0,0,.2)"}}>🎓</div>
+            <div style={{fontFamily:"Georgia,serif",fontSize:42,fontWeight:900,color:"#fff",
+              letterSpacing:"-1.5px",textAlign:"center",lineHeight:1.05,marginBottom:12}}>
+              EduBoard
+            </div>
+            <div style={{color:"rgba(255,255,255,.8)",fontSize:15,marginBottom:40,
+              textAlign:"center",lineHeight:1.65}}>
+              Devoirs · Exercices · Discussions
+            </div>
+          </div>
+          {/* white card bottom */}
+          <div style={{background:C.white,borderRadius:"28px 28px 0 0",padding:"28px 28px 32px"}}>
+            <Btn onClick={() => {}} style={{display:"none"}}/>
+            {/* Setup wizard lives here */}
+            <Setup onDone={acc => {
+              setAccounts(a => ({ ...a, [acc.id]:acc }));
+              setUser(acc); setTab("feed"); setView(null);
+            }}/>
+          </div>
+        </div>
+      </div>
+    </Wrap>
+  );
+
+  /* ══ APP ══ */
+  const liveRoom = selRoom ? rooms.find(r => r.id===selRoom.id)||selRoom : null;
+
+  return (
+    <Wrap>
+      <div style={phoneW}>
+
+        {/* ── TOP BAR ── */}
+        <div style={{background:C.white,borderBottom:`1.5px solid ${C.border}`,
+          boxShadow:"0 1px 0 rgba(0,0,0,.04)",flexShrink:0}}>
+          <div style={{padding:"12px 20px 0",display:"flex",justifyContent:"space-between"}}>
+            <span style={{color:C.muted,fontSize:11,fontWeight:600}}>
+              {new Date().toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})}
+            </span>
+            <span style={{color:C.muted,fontSize:11}}>●●● WiFi 🔋</span>
+          </div>
+
+          {view ? (
+            <div style={{display:"flex",alignItems:"center",gap:10,padding:"10px 20px 14px"}}>
+              <Btn onClick={goBack} style={{background:C.bg,borderRadius:12,padding:"7px 14px",
+                fontSize:13,fontWeight:700,color:C.ink2,border:`1.5px solid ${C.border}`}}>
+                ← Retour
+              </Btn>
+              <span style={{fontFamily:"Georgia,serif",fontSize:17,fontWeight:900,color:C.ink}}>
+                {{detail:"Publication",profview:"Profil",editprofile:"Modifier profil",
+                  roomview: liveRoom ? `# ${liveRoom.name}` : "Salon",
+                  createroom:"Nouveau salon"}[view] || ""}
+              </span>
+            </div>
+          ) : (
+            <div style={{padding:"8px 20px 0"}}>
+              <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:12}}>
+                <div style={{fontFamily:"Georgia,serif",fontSize:22,fontWeight:900,color:C.ink}}>
+                  Edu<span style={{color:C.red}}>Board</span>
+                </div>
+                <div style={{display:"flex",alignItems:"center",gap:8}}>
+                  {canPublish && tab!=="create" && (
+                    <Btn onClick={() => { setTab("create"); setView(null); }}
+                      style={{background:C.red,color:"#fff",borderRadius:12,padding:"8px 14px",
+                        fontSize:12,fontWeight:800,boxShadow:"0 3px 12px rgba(232,40,74,.25)"}}>
+                      + Publier
+                    </Btn>
+                  )}
+                  <div style={{cursor:"pointer"}} onClick={() => { setTab("profile"); setView(null); }}>
+                    <Avatar acc={user} size={36} fs={14}/>
+                  </div>
+                </div>
+              </div>
+              {/* tabs */}
+              <div style={{display:"flex",borderBottom:`1.5px solid ${C.border}`,
+                marginLeft:-20,marginRight:-20,paddingLeft:20,overflowX:"auto"}}>
+                {[
+                  {k:"feed",ic:"📚",lb:"Fil"},
+                  {k:"chat",ic:"💬",lb:"Salons"},
+                  {k:"teachers",ic:"👩‍🏫",lb:"Profs"},
+                  ...(canPublish ? [{k:"create",ic:"➕",lb:"Publier"}] : []),
+                  {k:"profile",ic:"👤",lb:"Profil"},
+                ].map(t => {
+                  const on = tab===t.k;
+                  return (
+                    <button key={t.k} onClick={() => { setTab(t.k); setView(null); }}
+                      style={{background:"none",border:"none",fontFamily:"inherit",
+                        borderBottom:`2.5px solid ${on ? C.red : "transparent"}`,
+                        color:on?C.red:C.muted,fontSize:12,fontWeight:700,
+                        padding:"8px 14px 12px",cursor:"pointer",whiteSpace:"nowrap",
+                        display:"flex",alignItems:"center",gap:4,marginBottom:-1.5}}>
+                      <span style={{fontSize:13}}>{t.ic}</span>{t.lb}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* ── BODY ── */}
+        <div style={{
+          flex:1,
+          overflowY: view==="roomview" ? "hidden" : "auto",
+          padding: view==="roomview" ? 0 : "16px 18px 110px",
+          display:"flex", flexDirection:"column",
+        }}>
+
+          {/* ════ FEED ════ */}
+          {tab==="feed" && !view && <>
+            {/* filter chips */}
+            <div style={{display:"flex",gap:8,overflowX:"auto",paddingBottom:14}}>
+              {["Tous",...SUBJECTS].map(s => {
+                const sc=acOf(s); const on=filter===s;
+                return (
+                  <button key={s} onClick={() => setFilter(s)}
+                    style={{background:on?sc:C.white,color:on?"#fff":C.ink2,
+                      border:`1.5px solid ${on?sc:C.border}`,borderRadius:20,
+                      padding:"6px 14px",fontSize:12,fontWeight:700,whiteSpace:"nowrap",
+                      cursor:"pointer",fontFamily:"inherit"}}>
+                    {s}
+                  </button>
+                );
+              })}
+            </div>
+
+            {filteredPosts.length === 0
+              ? <div style={{textAlign:"center",marginTop:60,color:C.muted,fontSize:14}}>Aucune publication</div>
+              : filteredPosts.map((post,i) => {
+                const pac = acOf(post.subject);
+                const auth = accounts[post.authorId];
+                return (
+                  <div key={post.id} onClick={() => { setSelPost(post); setView("detail"); }}
+                    style={{marginBottom:14,cursor:"pointer",
+                      animation:`fadeUp .3s ease ${i*.05}s both`}}>
+                    <div style={{...card(),padding:"16px 18px",position:"relative",overflow:"hidden"}}>
+                      <div style={{position:"absolute",top:0,left:0,right:0,height:4,
+                        background:`linear-gradient(90deg,${pac},${pac}55)`,
+                        borderRadius:"20px 20px 0 0"}}/>
+                      <div style={{marginTop:6}}>
+                        <div style={{display:"flex",justifyContent:"space-between",
+                          alignItems:"center",marginBottom:10}}>
+                          <span style={pill(`${pac}18`,pac)}>
+                            {TYPE_ICO[post.type]||"📄"} {post.type}
+                          </span>
+                          {post.files?.length>0 &&
+                            <span style={pill(C.greenL,C.green,{fontSize:10})}>
+                              📎 {post.files.length}
+                            </span>}
+                        </div>
+                        <div style={{fontFamily:"Georgia,serif",fontSize:16,fontWeight:700,
+                          color:C.ink,marginBottom:5}}>{post.title}</div>
+                        <div style={{color:C.muted,fontSize:12.5,lineHeight:1.55,
+                          marginBottom:12,whiteSpace:"pre-line"}}>
+                          {post.description.length>120
+                            ? post.description.slice(0,120)+"…"
+                            : post.description}
+                        </div>
+                        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+                          <div style={{display:"flex",alignItems:"center",gap:8}}>
+                            <Avatar acc={auth} size={28} fs={12}/>
+                            <span style={{color:C.ink2,fontSize:12.5,fontWeight:600}}>
+                              {post.authorName}
+                            </span>
+                            <span style={pill(`${pac}15`,pac,{fontSize:10})}>{post.subject}</span>
+                          </div>
+                          <span style={{color:C.muted,fontSize:11}}>{post.createdAt}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+          </>}
+
+          {/* ════ POST DETAIL ════ */}
+          {view==="detail" && selPost && (() => {
+            const pac  = acOf(selPost.subject);
+            const auth = accounts[selPost.authorId];
+            return (
+              <div style={{animation:"pop .25s ease"}}>
+                {/* hero */}
+                <div style={{...card(),padding:20,marginBottom:14,
+                  background:`linear-gradient(135deg,#fff 65%,${pac}10)`}}>
+                  <span style={{...pill(`${pac}18`,pac),marginBottom:12,display:"inline-flex"}}>
+                    {TYPE_ICO[selPost.type]||"📄"} {selPost.type}
+                  </span>
+                  <div style={{fontFamily:"Georgia,serif",fontSize:22,fontWeight:900,
+                    color:C.ink,marginBottom:10,lineHeight:1.25}}>{selPost.title}</div>
+                  <div style={{color:C.ink2,fontSize:14,lineHeight:1.8,whiteSpace:"pre-line"}}>
+                    {selPost.description}
+                  </div>
+                </div>
+
+                {/* author */}
+                {auth && (
+                  <div onClick={() => { setSelProf(auth); setView("profview"); }}
+                    style={{...card(),padding:"14px 18px",marginBottom:14,cursor:"pointer",
+                      display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                    <div style={{display:"flex",alignItems:"center",gap:12}}>
+                      <Avatar acc={auth} size={44}/>
+                      <div>
+                        <div style={{color:C.ink,fontWeight:700,fontSize:14}}>{auth.name}</div>
+                        <div style={{display:"flex",alignItems:"center",gap:4}}>
+                          <StarRow val={avgR(auth.ratings)}/>
+                          <span style={{color:C.muted,fontSize:11,marginLeft:2}}>
+                            {avgR(auth.ratings)} ({auth.ratings.length} avis)
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <span style={{color:C.red,fontSize:13,fontWeight:700}}>Voir →</span>
+                  </div>
+                )}
+
+                {/* files */}
+                {selPost.files?.length > 0 && <>
+                  <SecTitle>Fichiers ({selPost.files.length})</SecTitle>
+                  {selPost.files.map((file,i) => (
+                    <div key={i} style={{...card(),padding:"13px 16px",display:"flex",
+                      alignItems:"center",justifyContent:"space-between",marginBottom:8}}>
+                      <div style={{display:"flex",alignItems:"center",gap:12}}>
+                        <div style={{width:42,height:42,borderRadius:12,background:C.greenL,
+                          display:"flex",alignItems:"center",justifyContent:"center",fontSize:22}}>
+                          {fileIco(file.name)}
+                        </div>
+                        <div>
+                          <div style={{color:C.ink,fontSize:13,fontWeight:700}}>{file.name}</div>
+                          <div style={{color:C.muted,fontSize:11}}>{file.size}</div>
+                        </div>
+                      </div>
+                      <Btn onClick={() => dlFile(file)}
+                        style={{background:C.green,color:"#fff",borderRadius:12,
+                          padding:"9px 14px",fontSize:12,fontWeight:800,
+                          boxShadow:"0 3px 12px rgba(24,201,100,.3)"}}>
+                        ⬇ DL
+                      </Btn>
+                    </div>
+                  ))}
+                </>}
+
+                {(!selPost.files||selPost.files.length===0) && (
+                  <div style={{...card(),padding:16,textAlign:"center",color:C.muted,fontSize:13}}>
+                    Aucune pièce jointe
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+
+          {/* ════ CHAT LIST ════ */}
+          {tab==="chat" && !view && (
+            <>
+              <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:16}}>
+                <div>
+                  <div style={{fontFamily:"Georgia,serif",fontSize:18,fontWeight:900,color:C.ink}}>
+                    Salons 💬
+                  </div>
+                  <div style={{color:C.muted,fontSize:12,marginTop:1}}>
+                    {rooms.length} salon{rooms.length>1?"s":""}
+                  </div>
+                </div>
+                <Btn onClick={() => setView("createroom")}
+                  style={{background:C.blue,color:"#fff",borderRadius:12,padding:"9px 14px",
+                    fontSize:12,fontWeight:800,boxShadow:"0 3px 12px rgba(59,130,246,.3)"}}>
+                  + Créer
+                </Btn>
+              </div>
+
+              {rooms.map((room,i) => {
+                const isM  = room.members.includes(user.id) || room.ownerId===user.id;
+                const full = !isM && room.members.length>=room.maxMembers;
+                const last = room.messages[room.messages.length-1];
+                return (
+                  <div key={room.id} onClick={() => {
+                    if (!isM) {
+                      if (room.members.length >= room.maxMembers) { alert("Salon complet."); return; }
+                      setRooms(rs => rs.map(r => r.id===room.id
+                        ? { ...r, members:[...r.members,user.id] } : r));
+                    }
+                    setSelRoom(rooms.find(r=>r.id===room.id)||room);
+                    setView("roomview");
+                  }}
+                    style={{...card(),padding:"14px 16px",marginBottom:12,cursor:"pointer",
+                      animation:`fadeUp .32s ease ${i*.06}s both`}}>
+                    <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between"}}>
+                      <div style={{display:"flex",alignItems:"center",gap:12,flex:1}}>
+                        <div style={{width:48,height:48,borderRadius:16,
+                          background:`${C.blue}18`,display:"flex",alignItems:"center",
+                          justifyContent:"center",fontSize:24,flexShrink:0}}>
+                          {room.emoji}
+                        </div>
+                        <div style={{flex:1,minWidth:0}}>
+                          <div style={{fontWeight:800,color:C.ink,fontSize:14}}>{room.name}</div>
+                          {room.desc && <div style={{color:C.muted,fontSize:12,marginTop:1}}>{room.desc}</div>}
+                          {last && (
+                            <div style={{color:C.muted,fontSize:11,marginTop:4,
+                              whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>
+                              <b style={{color:C.ink2}}>{last.authorName}:</b> {last.text}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                      <div style={{display:"flex",flexDirection:"column",alignItems:"flex-end",
+                        gap:6,marginLeft:10,flexShrink:0}}>
+                        <span style={pill(
+                          isM?C.greenL:full?C.redL:C.blueL,
+                          isM?C.green:full?C.red:C.blue,
+                          {fontSize:10})}>
+                          {isM?"✓ Membre":full?"Complet":"Rejoindre"}
+                        </span>
+                        <span style={{color:C.muted,fontSize:10,fontWeight:600}}>
+                          👥 {room.members.length}/{room.maxMembers}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </>
+          )}
+
+          {/* ════ CREATE ROOM ════ */}
+          {view==="createroom" && (
+            <div style={{animation:"pop .25s ease",display:"flex",flexDirection:"column",gap:14}}>
+              <p style={{color:C.muted,fontSize:13}}>Créez un espace privé (1–10 membres).</p>
+
+              <div>
+                <Label>Nom du salon *</Label>
+                <input value={crName} onChange={e=>setCrName(e.target.value)}
+                  placeholder="ex: Groupe révisions Maths" style={inputS(!crName)}/>
+              </div>
+
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+                <div>
+                  <Label>Emoji</Label>
+                  <input value={crEmoji} onChange={e=>setCrEmoji(e.target.value)}
+                    maxLength={2} style={{...inputS(),textAlign:"center",fontSize:20}}/>
+                </div>
+                <div>
+                  <Label>Membres max (1–10)</Label>
+                  <input type="number" min={1} max={10} value={crMax}
+                    onChange={e=>setCrMax(Math.max(1,Math.min(10,parseInt(e.target.value)||1)))}
+                    style={inputS()}/>
+                </div>
+              </div>
+
+              <div>
+                <Label>Description</Label>
+                <input value={crDesc} onChange={e=>setCrDesc(e.target.value)}
+                  placeholder="Sujet du groupe…" style={inputS()}/>
+              </div>
+
+              <div>
+                <Label>👩‍🏫 Inviter un professeur (optionnel)</Label>
+                <select value={crTeach} onChange={e=>setCrTeach(e.target.value)}
+                  style={{width:"100%",background:C.bg,border:`1.5px solid ${C.border}`,
+                    borderRadius:12,padding:"11px 10px",color:C.ink,fontSize:13,fontFamily:"inherit"}}>
+                  <option value="">— Aucun —</option>
+                  {allTeachers.map(t=><option key={t.id} value={t.id}>{t.name} ({t.subject})</option>)}
+                </select>
+                {crTeach && accounts[crTeach] && (
+                  <div style={{...card({borderRadius:14}),padding:"10px 14px",marginTop:8,
+                    display:"flex",alignItems:"center",gap:10,
+                    background:C.blueL,border:`1.5px solid ${C.blue}33`}}>
+                    <Avatar acc={accounts[crTeach]} size={32} fs={13}/>
+                    <div style={{fontSize:13,color:C.blue,fontWeight:700}}>
+                      {accounts[crTeach].name} sera invité(e) comme accompagnateur
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <Btn onClick={handleCreateRoom} disabled={!crName.trim()}
+                style={{width:"100%",background:`linear-gradient(135deg,${C.blue},#6366f1)`,
+                  color:"#fff",borderRadius:16,padding:15,fontSize:15,fontWeight:800,
+                  boxShadow:"0 5px 20px rgba(59,130,246,.28)"}}>
+                🚀 Créer le salon
+              </Btn>
+            </div>
+          )}
+
+          {/* ════ ROOM CHAT ════ */}
+          {view==="roomview" && liveRoom && (
+            <div style={{display:"flex",flexDirection:"column",height:"calc(100vh - 130px)"}}>
+              {/* members bar */}
+              <div style={{background:C.white,borderBottom:`1.5px solid ${C.border}`,
+                padding:"10px 16px",display:"flex",alignItems:"center",gap:8,flexShrink:0}}>
+                <div style={{display:"flex"}}>
+                  {liveRoom.members.map(id=>accounts[id]).filter(Boolean).slice(0,5).map((m,i)=>(
+                    <div key={i} style={{marginLeft:i>0?-8:0}}>
+                      <Avatar acc={m} size={26} fs={10}/>
+                    </div>
+                  ))}
+                </div>
+                <span style={{color:C.ink2,fontSize:12,fontWeight:700}}>
+                  {liveRoom.members.length}/{liveRoom.maxMembers} membres
+                </span>
+                {liveRoom.desc && (
+                  <span style={{color:C.muted,fontSize:11,marginLeft:"auto",
+                    overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap",maxWidth:120}}>
+                    {liveRoom.desc}
+                  </span>
+                )}
+              </div>
+
+              {/* messages */}
+              <div style={{flex:1,overflowY:"auto",padding:"14px 14px 8px",
+                display:"flex",flexDirection:"column",gap:10,background:C.chatBg}}>
+                {liveRoom.messages.length===0 && (
+                  <div style={{textAlign:"center",margin:"auto",color:C.muted,fontSize:14}}>
+                    <div style={{fontSize:40,marginBottom:10}}>💬</div>
+                    Aucun message — soyez le premier !
+                  </div>
+                )}
+                {liveRoom.messages.map((msg,i) => {
+                  const isMe  = msg.authorId===user.id;
+                  const sender= accounts[msg.authorId];
+                  return (
+                    <div key={msg.id} style={{display:"flex",
+                      flexDirection:isMe?"row-reverse":"row",
+                      alignItems:"flex-end",gap:8,
+                      animation:`slideUp .2s ease ${i*.02}s both`}}>
+                      {!isMe && <Avatar acc={sender||{name:msg.authorName,color:C.muted}} size={30} fs={12}/>}
+                      <div style={{maxWidth:"75%"}}>
+                        {!isMe && (
+                          <div style={{color:C.muted,fontSize:10,fontWeight:700,marginBottom:3,marginLeft:4}}>
+                            {msg.authorName}
+                            {sender?.role==="Professeur" && (
+                              <span style={pill(C.yellowL,"#996900",{fontSize:9,padding:"1px 6px",marginLeft:5})}>
+                                Prof
+                              </span>
+                            )}
+                          </div>
+                        )}
+                        <div style={{
+                          background: isMe ? `linear-gradient(135deg,${uc},${uc}cc)` : "#fff",
+                          color: isMe ? "#fff" : C.ink,
+                          borderRadius: isMe ? "18px 18px 4px 18px" : "18px 18px 18px 4px",
+                          padding:"10px 14px",fontSize:14,lineHeight:1.5,
+                          border: isMe ? "none" : `1.5px solid ${C.border}`,
+                          boxShadow:"0 2px 8px rgba(0,0,0,.06)",
+                        }}>{msg.text}</div>
+                        <div style={{color:C.muted,fontSize:10,marginTop:3,
+                          textAlign:isMe?"right":"left"}}>
+                          {msg.time}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+                <div ref={chatEndRef}/>
+              </div>
+
+              {/* input bar */}
+              <div style={{background:C.white,borderTop:`1.5px solid ${C.border}`,
+                padding:"12px 14px",display:"flex",gap:8,alignItems:"center",flexShrink:0}}>
+                <input
+                  value={chatMsg}
+                  onChange={e => setChatMsg(e.target.value)}
+                  onKeyDown={e => { if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();handleSend();} }}
+                  placeholder="Écrire un message…"
+                  style={{...inputS(),flex:1,padding:"11px 14px",borderRadius:24}}
+                />
+                <Btn onClick={handleSend} disabled={!chatMsg.trim()}
+                  style={{width:44,height:44,borderRadius:"50%",flexShrink:0,
+                    background: chatMsg.trim()
+                      ? `linear-gradient(135deg,${uc},${uc}cc)` : "#e5e7f0",
+                    color: chatMsg.trim() ? "#fff" : C.muted,
+                    fontSize:18,display:"flex",alignItems:"center",justifyContent:"center"}}>
+                  ➤
+                </Btn>
+              </div>
+            </div>
+          )}
+
+          {/* ════ TEACHERS ════ */}
+          {tab==="teachers" && !view && (
+            <>
+              <div style={{color:C.muted,fontSize:12,marginBottom:14}}>
+                {allTeachers.length} enseignant{allTeachers.length>1?"s":""}
+              </div>
+              {allTeachers.map((t,i) => {
+                const tac = t.color||acOf(t.subject);
+                return (
+                  <div key={t.id} onClick={() => { setSelProf(t); setView("profview"); }}
+                    style={{...card(),padding:18,marginBottom:12,cursor:"pointer",
+                      animation:`fadeUp .32s ease ${i*.07}s both`}}>
+                    <div style={{display:"flex",alignItems:"center",gap:14}}>
+                      <Avatar acc={t} size={54} fs={22}/>
+                      <div style={{flex:1}}>
+                        <div style={{fontWeight:800,color:C.ink,fontSize:15}}>{t.name}</div>
+                        <span style={pill(`${tac}15`,tac,{fontSize:10,display:"inline-flex",marginTop:3,marginBottom:6})}>
+                          {t.subject}
+                        </span>
+                        <div style={{display:"flex",alignItems:"center",gap:6}}>
+                          <StarRow val={parseFloat(avgR(t.ratings))}/>
+                          <span style={{color:C.muted,fontSize:11}}>
+                            {avgR(t.ratings)} · {t.ratings.length} avis
+                          </span>
+                        </div>
+                      </div>
+                      <div style={{textAlign:"center"}}>
+                        <div style={{fontFamily:"Georgia,serif",fontSize:20,fontWeight:900,color:C.red}}>
+                          {posts.filter(p=>p.authorId===t.id).length}
+                        </div>
+                        <div style={{fontSize:10,color:C.muted,fontWeight:600}}>publi.</div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </>
+          )}
+
+          {/* ════ PROF/USER PROFILE ════ */}
+          {view==="profview" && selProf && (() => {
+            const tac  = selProf.color||acOf(selProf.subject)||C.red;
+            const ta   = avgR(selProf.ratings);
+            const pc   = posts.filter(p=>p.authorId===selProf.id).length;
+            const done = doneR[selProf.id];
+            const pend = pendR[selProf.id]||0;
+            const isMe = user.id===selProf.id;
+            return (
+              <div style={{animation:"pop .25s ease"}}>
+                {/* header */}
+                <div style={{...card(),overflow:"hidden",marginBottom:14}}>
+                  <div style={{height:80,background:`linear-gradient(135deg,${tac},${tac}77)`}}/>
+                  <div style={{padding:"0 20px 20px",marginTop:-38}}>
+                    <Avatar acc={selProf} size={76} fs={30}/>
+                    <div style={{marginTop:10}}>
+                      <div style={{fontFamily:"Georgia,serif",fontSize:22,fontWeight:900,color:C.ink}}>
+                        {selProf.name}
+                      </div>
+                      <span style={pill(`${tac}18`,tac,{display:"inline-flex",marginTop:4})}>
+                        {selProf.subject}
+                      </span>
+                      <div style={{color:C.ink2,fontSize:13,lineHeight:1.65,marginTop:10}}>
+                        {selProf.bio||"Aucune description."}
+                      </div>
+                      {isMe && (
+                        <Btn onClick={openEdit}
+                          style={{marginTop:12,background:C.bg,border:`1.5px solid ${C.border}`,
+                            borderRadius:12,padding:"8px 16px",fontSize:13,fontWeight:700,color:C.ink2}}>
+                          ✏️ Modifier mon profil
+                        </Btn>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* stats */}
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:10,marginBottom:14}}>
+                  {[
+                    {l:"Publications",v:pc,        bg:C.redL,   c:C.red},
+                    {l:"Note moy.",   v:`${ta}/5`, bg:C.yellowL,c:"#B8890A"},
+                    {l:"Avis",        v:selProf.ratings.length,bg:C.greenL,c:C.green},
+                  ].map(s=>(
+                    <div key={s.l} style={{background:s.bg,borderRadius:16,padding:"14px 12px",textAlign:"center"}}>
+                      <div style={{fontSize:20,fontWeight:900,color:s.c,fontFamily:"Georgia,serif"}}>{s.v}</div>
+                      <div style={{fontSize:11,color:s.c,fontWeight:600,marginTop:2}}>{s.l}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* rating */}
+                {!isMe && (
+                  <div style={{...card(),padding:20,marginBottom:14}}>
+                    <div style={{fontWeight:800,color:C.ink,fontSize:15,marginBottom:12}}>
+                      {done?"✅ Note envoyée !":"⭐ Noter ce professeur"}
+                    </div>
+                    {done ? (
+                      <div style={{display:"flex",alignItems:"center",gap:8}}>
+                        <StarRow val={done} size={20}/>
+                        <span style={{color:C.muted,fontSize:13}}>Vous avez noté {done}/5</span>
+                      </div>
+                    ) : (
+                      <>
+                        <div style={{display:"flex",gap:8,marginBottom:14}}>
+                          <StarRow val={pend} size={34}
+                            onPick={n => setPendR(r=>({...r,[selProf.id]:n}))}/>
+                        </div>
+                        {pend > 0 && (
+                          <Btn onClick={() => submitRating(selProf.id)}
+                            style={{background:C.yellow,color:C.ink,borderRadius:12,
+                              padding:"11px 22px",fontSize:13,fontWeight:800}}>
+                            Envoyer ({pend}/5)
+                          </Btn>
+                        )}
+                      </>
+                    )}
+                  </div>
+                )}
+
+                {/* prof's posts */}
+                {pc > 0 && <>
+                  <SecTitle>Publications ({pc})</SecTitle>
+                  {posts.filter(p=>p.authorId===selProf.id).map((post,i)=>{
+                    const pac=acOf(post.subject);
+                    return (
+                      <div key={post.id} onClick={()=>{setSelPost(post);setView("detail");}}
+                        style={{...card(),padding:"14px 16px",marginBottom:10,cursor:"pointer",
+                          animation:`fadeUp .3s ease ${i*.06}s both`}}>
+                        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:6}}>
+                          <span style={pill(`${pac}18`,pac)}>{TYPE_ICO[post.type]||"📄"} {post.type}</span>
+                          <span style={{color:C.muted,fontSize:11}}>{post.createdAt}</span>
+                        </div>
+                        <div style={{fontWeight:700,color:C.ink,fontSize:14}}>{post.title}</div>
+                        <div style={{color:C.muted,fontSize:12,marginTop:4}}>
+                          {post.description.slice(0,60)}…
+                        </div>
+                      </div>
+                    );
+                  })}
+                </>}
+              </div>
+            );
+          })()}
+
+          {/* ════ EDIT PROFILE ════ */}
+          {view==="editprofile" && (
+            <div style={{animation:"pop .25s ease",display:"flex",flexDirection:"column",gap:14}}>
+              {editSaved ? (
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",
+                  justifyContent:"center",height:260,gap:16}}>
+                  <div style={{width:72,height:72,borderRadius:"50%",background:C.greenL,
+                    display:"flex",alignItems:"center",justifyContent:"center",fontSize:36}}>✅</div>
+                  <div style={{fontFamily:"Georgia,serif",fontSize:20,fontWeight:900,color:C.ink}}>
+                    Profil mis à jour !
+                  </div>
+                </div>
+              ) : <>
+                {/* avatar picker */}
+                <div style={{...card(),padding:20,display:"flex",flexDirection:"column",
+                  alignItems:"center",gap:12}}>
+                  <div style={{position:"relative",cursor:"pointer"}} onClick={changeAvatar}>
+                    <Avatar acc={user} size={84} fs={32}/>
+                    <div style={{position:"absolute",bottom:2,right:2,width:28,height:28,
+                      borderRadius:"50%",background:C.white,border:`1.5px solid ${C.border}`,
+                      display:"flex",alignItems:"center",justifyContent:"center",fontSize:14}}>📷</div>
+                  </div>
+                  {user.avatar && (
+                    <Btn onClick={()=>{const u2={...user,avatar:null};setUser(u2);setAccounts(a=>({...a,[u2.id]:u2}));}}
+                      style={{background:"none",color:C.muted,fontSize:12,fontWeight:600}}>
+                      Supprimer la photo
+                    </Btn>
+                  )}
+                </div>
+
+                {/* color */}
+                <div>
+                  <Label>Couleur d'avatar</Label>
+                  <div style={{display:"flex",gap:10,flexWrap:"wrap"}}>
+                    {COLORS.map(col=>(
+                      <div key={col} onClick={()=>setEditColor(col)}
+                        style={{width:34,height:34,borderRadius:"50%",background:col,
+                          cursor:"pointer",transition:"border .15s",
+                          border:`3px solid ${editColor===col?C.ink:"transparent"}`}}/>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <Label>Nom affiché</Label>
+                  <input value={editName} onChange={e=>setEditName(e.target.value)}
+                    placeholder={user.name} style={inputS()}/>
+                </div>
+
+                <div>
+                  <Label>Matière</Label>
+                  <select value={editSubj} onChange={e=>setEditSubj(e.target.value)}
+                    style={{width:"100%",background:C.bg,border:`1.5px solid ${C.border}`,
+                      borderRadius:12,padding:"11px 10px",color:C.ink,fontSize:14,fontFamily:"inherit"}}>
+                    {SUBJECTS.map(s=><option key={s}>{s}</option>)}
+                  </select>
+                </div>
+
+                <div>
+                  <Label>Bio</Label>
+                  <textarea rows={4} value={editBio} onChange={e=>setEditBio(e.target.value)}
+                    placeholder="Présentez-vous…"
+                    style={{...inputS(),resize:"none",lineHeight:1.65}}/>
+                </div>
+
+                <Btn onClick={saveEdit}
+                  style={{background:`linear-gradient(135deg,${C.green},${C.greenM})`,
+                    color:"#fff",borderRadius:14,padding:15,fontSize:15,fontWeight:800,
+                    boxShadow:"0 5px 20px rgba(24,201,100,.28)"}}>
+                  💾 Enregistrer les modifications
+                </Btn>
+              </>}
+            </div>
+          )}
+
+          {/* ════ MY PROFILE ════ */}
+          {tab==="profile" && !view && (() => {
+            const myPosts  = posts.filter(p=>p.authorId===user.id);
+            const myRoomsN = rooms.filter(r=>r.members.includes(user.id)).length;
+            return (
+              <div>
+                {/* header card */}
+                <div style={{...card(),overflow:"hidden",marginBottom:14}}>
+                  <div style={{height:80,background:`linear-gradient(135deg,${uc},${uc}77)`}}/>
+                  <div style={{padding:"0 20px 20px",marginTop:-38}}>
+                    <Avatar acc={user} size={76} fs={30}/>
+                    <div style={{marginTop:10}}>
+                      <div style={{fontFamily:"Georgia,serif",fontSize:22,fontWeight:900,color:C.ink}}>
+                        {user.name}
+                      </div>
+                      <div style={{display:"flex",gap:6,marginTop:5,flexWrap:"wrap"}}>
+                        <span style={pill(`${uc}18`,uc)}>{user.role}</span>
+                        <span style={pill(C.border,C.muted)}>{user.subject}</span>
+                      </div>
+                      <div style={{color:C.ink2,fontSize:13,lineHeight:1.65,marginTop:10}}>
+                        {user.bio||"Aucune description."}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* actions */}
+                <div style={{display:"flex",gap:10,marginBottom:14}}>
+                  <Btn onClick={openEdit}
+                    style={{flex:1,background:C.white,border:`1.5px solid ${C.border}`,
+                      borderRadius:14,padding:12,fontSize:13,fontWeight:700,color:C.ink2}}>
+                    ✏️ Modifier
+                  </Btn>
+                  <Btn onClick={() => { setUser(null); setTab("feed"); setView(null); }}
+                    style={{flex:1,background:C.redL,border:`1.5px solid ${C.red}`,
+                      borderRadius:14,padding:12,fontSize:13,fontWeight:700,color:C.red}}>
+                    🚪 Quitter
+                  </Btn>
+                </div>
+
+                {/* stats */}
+                <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:10,marginBottom:16}}>
+                  {[
+                    {l:"Publications",v:myPosts.length, bg:C.redL,   c:C.red},
+                    {l:"Salons",      v:myRoomsN,        bg:C.blueL,  c:C.blue},
+                    {l:"Rôle",        v:user.role==="Professeur"?"Prof":"Élève",bg:C.greenL,c:C.green},
+                  ].map(s=>(
+                    <div key={s.l} style={{background:s.bg,borderRadius:16,padding:"14px 8px",textAlign:"center"}}>
+                      <div style={{fontSize:s.l==="Rôle"?13:22,fontWeight:900,color:s.c,
+                        fontFamily:"Georgia,serif",wordBreak:"break-word"}}>{s.v}</div>
+                      <div style={{fontSize:11,color:s.c,fontWeight:600,marginTop:2}}>{s.l}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
+
+          {/* ════ CREATE POST ════ */}
+          {tab==="create" && !view && canPublish && (
+            <div>
+              {published ? (
+                <div style={{display:"flex",flexDirection:"column",alignItems:"center",
+                  justifyContent:"center",height:300,gap:16,animation:"pop .4s ease"}}>
+                  <div style={{width:80,height:80,borderRadius:"50%",background:C.greenL,
+                    display:"flex",alignItems:"center",justifyContent:"center",fontSize:40}}>✅</div>
+                  <div style={{fontFamily:"Georgia,serif",fontSize:22,fontWeight:900,color:C.ink}}>
+                    Publié !
+                  </div>
+                  <div style={{color:C.muted,fontSize:13}}>Les élèves peuvent maintenant le voir</div>
+                </div>
+              ) : (
+                <div style={{animation:"fadeUp .3s ease",display:"flex",flexDirection:"column",gap:14}}>
+                  <div style={{fontFamily:"Georgia,serif",fontSize:20,fontWeight:900,color:C.ink}}>
+                    Nouvelle publication
+                  </div>
+
+                  {/* author tag */}
+                  <div style={{...card({borderRadius:14}),padding:"12px 16px",
+                    display:"flex",alignItems:"center",gap:10,
+                    background:C.redL,border:`1.5px solid ${C.redM}33`}}>
+                    <Avatar acc={user} size={36} fs={15}/>
+                    <div>
+                      <div style={{fontWeight:700,color:C.ink,fontSize:13}}>{user.name}</div>
+                      <div style={{color:C.muted,fontSize:11}}>{user.subject} · {user.role}</div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label>Titre *</Label>
+                    <input value={pubTitle} onChange={e=>setPubTitle(e.target.value)}
+                      placeholder="ex: Exercice sur les intégrales"
+                      style={inputS(!pubTitle)}/>
+                  </div>
+
+                  <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}>
+                    <div>
+                      <Label>Matière</Label>
+                      <select value={pubSubj} onChange={e=>setPubSubj(e.target.value)}
+                        style={{width:"100%",background:C.bg,border:`1.5px solid ${C.border}`,
+                          borderRadius:12,padding:"11px 10px",color:C.ink,fontSize:13,fontFamily:"inherit"}}>
+                        {SUBJECTS.map(s=><option key={s}>{s}</option>)}
+                      </select>
+                    </div>
+                    <div>
+                      <Label>Type</Label>
+                      <select value={pubType} onChange={e=>setPubType(e.target.value)}
+                        style={{width:"100%",background:C.bg,border:`1.5px solid ${C.border}`,
+                          borderRadius:12,padding:"11px 10px",color:C.ink,fontSize:13,fontFamily:"inherit"}}>
+                        {TYPES.map(t=><option key={t}>{t}</option>)}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <Label>Contenu / Énoncé</Label>
+                    <textarea rows={5} value={pubDesc} onChange={e=>setPubDesc(e.target.value)}
+                      placeholder="Énoncé de l'exercice, consignes…"
+                      style={{...inputS(),resize:"none",lineHeight:1.65}}/>
+                  </div>
+
+                  {/* file attachments */}
+                  <div>
+                    <Label>📎 Pièces jointes</Label>
+                    {pubFiles.length > 0 && (
+                      <div style={{display:"flex",flexDirection:"column",gap:6,marginBottom:8}}>
+                        {pubFiles.map((f,i)=>(
+                          <div key={i} style={{background:C.bg,border:`1.5px solid ${C.border}`,
+                            borderRadius:10,padding:"9px 12px",
+                            display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                            <div style={{display:"flex",alignItems:"center",gap:8}}>
+                              <span style={{fontSize:16}}>{fileIco(f.name)}</span>
+                              <div>
+                                <div style={{color:C.ink,fontSize:12,fontWeight:600}}>{f.name}</div>
+                                <div style={{color:C.muted,fontSize:11}}>{f.size}</div>
+                              </div>
+                            </div>
+                            <Btn onClick={()=>setPubFiles(fs=>fs.filter((_,j)=>j!==i))}
+                              style={{background:"none",color:C.muted,fontSize:15,padding:"2px 6px"}}>
+                              ✕
+                            </Btn>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    <div style={{display:"flex",gap:8}}>
+                      <Btn onClick={()=>pickImage(f=>setPubFiles(fs=>[...fs,f]))}
+                        style={{flex:1,background:C.yellowL,border:`2px dashed ${C.yellowM}`,
+                          borderRadius:12,padding:10,fontSize:12,fontWeight:700,color:"#996900"}}>
+                        🖼️ Photos
+                      </Btn>
+                      <Btn onClick={()=>pickDoc(f=>setPubFiles(fs=>[...fs,f]))}
+                        style={{flex:1,background:C.greenL,border:`2px dashed ${C.greenM}`,
+                          borderRadius:12,padding:10,fontSize:12,fontWeight:700,color:C.green}}>
+                        📄 Documents
+                      </Btn>
+                    </div>
+                  </div>
+
+                  <Btn onClick={handlePublish} disabled={!pubTitle.trim()}
+                    style={{marginTop:4,width:"100%",
+                      background:`linear-gradient(135deg,${C.red},${C.redM})`,
+                      color:"#fff",borderRadius:16,padding:16,fontSize:15,fontWeight:800,
+                      boxShadow:"0 6px 24px rgba(232,40,74,.3)"}}>
+                    📢 Publier maintenant
+                  </Btn>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* ── BOTTOM NAV ── */}
+        {!view && (
+          <div style={{background:C.white,borderTop:`1.5px solid ${C.border}`,
+            padding:"10px 6px 24px",display:"flex",justifyContent:"space-around",
+            boxShadow:"0 -4px 20px rgba(26,26,46,.06)",flexShrink:0}}>
+            {[
+              {k:"feed",ic:"📚",lb:"Fil"},
+              {k:"chat",ic:"💬",lb:"Salons"},
+              {k:"teachers",ic:"👩‍🏫",lb:"Profs"},
+              ...(canPublish ? [{k:"create",ic:"➕",lb:"Publier"}] : []),
+              {k:"profile",ic:"👤",lb:"Profil"},
+            ].map(item => {
+              const on = tab===item.k;
+              return (
+                <div key={item.k} onClick={() => { setTab(item.k); setView(null); }}
+                  style={{display:"flex",flexDirection:"column",alignItems:"center",
+                    gap:3,cursor:"pointer"}}>
+                  <div style={{width:40,height:40,borderRadius:14,
+                    background:on?C.redL:"transparent",transition:"background .2s",
+                    display:"flex",alignItems:"center",justifyContent:"center",fontSize:18}}>
+                    {item.ic}
+                  </div>
+                  <span style={{fontSize:10,color:on?C.red:C.muted,fontWeight:on?800:500}}>
+                    {item.lb}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </Wrap>
+  );
+}
+
+/* ── Shell ── */
+function Wrap({ children }) {
+  return (
+    <div style={{minHeight:"100vh",background:"#D8DBE6",display:"flex",
+      justifyContent:"center",alignItems:"flex-start",
+      fontFamily:"'Segoe UI',system-ui,-apple-system,sans-serif",
+      padding:"16px 10px 30px"}}>
+      <style>{`
+        @keyframes fadeUp  { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
+        @keyframes pop     { from{transform:scale(.92);opacity:0}        to{transform:scale(1);opacity:1} }
+        @keyframes shake   { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-8px)} 75%{transform:translateX(8px)} }
+        @keyframes slideUp { from{transform:translateY(14px);opacity:0}  to{transform:translateY(0);opacity:1} }
+        * { box-sizing:border-box; margin:0; padding:0; }
+        ::-webkit-scrollbar { display:none; }
+        input, textarea, select { outline:none; -webkit-appearance:none; }
+        button { transition: opacity .15s, transform .15s; }
+        button:not(:disabled):active { opacity:.8; transform:scale(.96); }
+      `}</style>
+      {children}
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(App));
+</script>
+</body>
+</html>
